@@ -12,7 +12,8 @@
 
     <ul>
         <a href="{% url 'post-detail' post.pk %}"><h1>{{ post.title }}</h1></a>
-        <p>{{ post.author.first_name}} {{ post.author.last_name}}</p>
+        <h4>{{ post.author.first_name}} {{ post.author.last_name}}</h4>
+        <h6>{{ post.post_date }}</h6>
         <p>{{ post.body }}</p>
         <hr>
     </ul>

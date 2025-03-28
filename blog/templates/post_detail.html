@@ -8,6 +8,7 @@
 
     <h1>{{ post.title }}</h1>
     <h4>{{ post.author.first_name}} {{ post.author.last_name}}</h4>
+    <h6>{{ post.post_date }}</h6>
     <hr>
     <p>{{ post.body }}</p>
     <a href="{% url 'post-list' %}" class="btn btn-secondary">Back</a>
