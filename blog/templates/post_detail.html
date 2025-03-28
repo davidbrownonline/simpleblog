@@ -11,4 +11,5 @@
     <hr>
     <p>{{ post.body }}</p>
     <a href="{% url 'post-list' %}" class="btn btn-secondary">Back</a>
+    <a href="{% url 'post-update' post.pk %}" class="btn btn-secondary">Update</a>
 {% endblock %}
