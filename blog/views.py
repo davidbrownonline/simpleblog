@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Post
+from .forms import PostForm
 
 
 class PostListView(ListView):
@@ -15,6 +16,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'post_create.html'
-    fields = '__all__'
+#   fields included in PostForm
 
