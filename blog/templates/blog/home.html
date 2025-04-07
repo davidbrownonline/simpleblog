@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+
+{% block title %} home-page {% endblock title %}
+
+{% block content %}
+
+{%  for post in object_list %}
+   
+    <ul>
+
+            <h1>{{ post.title }}</h1></a>
+            <h4>{{ post.author.username}} </h4>
+            <h6>{{ post.date }}</h6>
+            <p>{{ post.body|slice:":500" }}</p>
+
+            <a href="{% url 'post-detail' post.id %}">Read full article</a>
+            <hr>
+    </ul>
+
+{% endfor %}
+
+{% endblock content %}
